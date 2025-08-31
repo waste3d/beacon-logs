@@ -15,10 +15,10 @@ graph TD
 
     subgraph "Система 'Beacon'"
         subgraph "Сервисы"
-            Collector[Collector Service (Go)]
-            Archiver[Archiver Service (Go)]
-            Aggregator[Aggregator Service (Go)]
-            API[API Service (Go)]
+            Collector["Collector Service (Go)"]
+            Archiver["Archiver Service (Go)"]
+            Aggregator["Aggregator Service (Go)"]
+            API["API Service (Go)"]
         end
         
         subgraph "Инфраструктура"
