@@ -32,18 +32,17 @@ func (s *Service) Run(subj string) error {
 	if err != nil {
 		return err
 	}
-	return nil
+
+	log.Printf("Подписались на тему '%s'. Ожидаем сообщения...", subj)
+
+	select {}
+
 }
 
 func (s *Service) handleEvent(msg *nats.Msg) {
 	var event Event
 	if err := json.Unmarshal(msg.Data, &event); err != nil {
 		log.Printf("Failed to unmarshal event data: %v", err)
-		return
-	}
-
-	// Пока только page_view
-	if event.Event != "page_view" || event.Url == "" {
 		return
 	}
 

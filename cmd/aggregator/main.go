@@ -13,7 +13,7 @@ import (
 const (
 	natsURL     = "nats://localhost:4222"
 	natsSubject = "events.raw"
-	postgresURL = "postgres://user:password@localhost:5432/beacon"
+	postgresURL = "postgres://waste3d:waste3d@localhost:5432/beacon"
 )
 
 func main() {
